@@ -1,0 +1,65 @@
+.infoCard__container {
+  text-wrap: balance;
+  max-width: 250px;
+}
+
+.infoCard__title,
+.infoCard__text {
+  letter-spacing: -0.025em;
+}
+
+.infoCard__text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.card__learnMore {
+  width: fit-content;
+
+  &::after {
+    content: '';
+    border-top: 1px solid var(--bs-foreground);
+    position: absolute;
+    width: 1rem;
+    bottom: 0;
+    left: 0;
+    transition-property: width;
+    transition-duration: 200ms;
+  }
+
+  &::after,
+  > #text,
+  #arrow {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  & > #text,
+  #arrow {
+    transition-property: transform;
+  }
+
+  & > #text {
+    transition-duration: 200ms;
+  }
+
+  & > #arrow {
+    margin-right: -6px;
+    transition-duration: 300ms;
+  }
+
+  &:hover {
+    & > #text {
+      transform: translateY(-3px);
+    }
+
+    & > #arrow {
+      transform: translateX(1px) translateY(-1px);
+    }
+
+    &::after {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@keyframes logo-spinning {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.brand-logo {
+  stroke: #ccc;
+  animation: logo-spinning 40s linear infinite backwards;
+}

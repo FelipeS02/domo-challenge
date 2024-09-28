@@ -1,0 +1,43 @@
+.hero__wrapper {
+  max-width: 1400px;
+
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.hero__text {
+  @media (min-width: 768px) {
+    grid-column: span 4 / span 4;
+  }
+
+  @media (min-width: 1024px) {
+    grid-column: span 3 / span 3;
+  }
+}
+
+.hero__text__heading {
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+.hero__card__icon {
+  overflow: visible;
+  stroke-width: 1;
+
+  & > #background {
+    filter: drop-shadow(0 1px 1px rgb(0 0 0 / 0.05));
+  }
+}
+
+.hero__image {
+  & > img {
+    object-fit: cover;
+    object-position: top;
+  }
+
+  grid-column: span 3 / span 3;
+
+  @media (min-width: 1024px) {
+    grid-column: span 3 / span 3;
+    grid-column-start: 5;
+  }
+}
