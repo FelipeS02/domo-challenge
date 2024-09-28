@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className='d-flex justify-content-center w-100 py-5 bg-foreground-100'>
+    <footer className='d-flex justify-content-center w-100 py-5 px-4 bg-foreground-100'>
       <div style={{ maxWidth: '1400px' }}>
         <h4>Acerca del proyecto:</h4>
         <p className='fs-4'>
